@@ -27,10 +27,10 @@ import static java.lang.String.format;
 
 public class AhrefLabel extends JLabel {
 
-    private static final String URL_TEMPLATE = "<html><a href=\"%s\">%s</a></html>";
+    private static final String URL_TEMPLATE = "<html><font size=\"%s\"><a href=\"%s\">%s</a></font></html>";
 
-    public AhrefLabel(String url, String urlText, String toolTipText, String htmlLinkColor) {
-        setText(urlText != null ? format(URL_TEMPLATE, url, urlText) : format(URL_TEMPLATE, url, url));
+    public AhrefLabel(String url, String urlText, String toolTipText, String htmlLinkColor, int fontSize) {
+        setText(urlText != null ? format(URL_TEMPLATE, fontSize, url, urlText) : format(URL_TEMPLATE, fontSize, url, url));
         setForeground(htmlLinkColor != null ? Color.decode(htmlLinkColor) : Color.blue.brighter());
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         setToolTipText(toolTipText);
@@ -48,15 +48,15 @@ public class AhrefLabel extends JLabel {
     }
 
     public AhrefLabel(String url, String urlText, String toolTipText) {
-        this(url, urlText, toolTipText, null);
+        this(url, urlText, toolTipText, null, 3);
     }
 
     public AhrefLabel(String url, String urlText) {
-        this(url, urlText, null, null);
+        this(url, urlText, null, null, 3);
     }
 
     public AhrefLabel(String url) {
-        this(url, null, null, null);
+        this(url, null, null, null, 3);
     }
 
     private String localize(String key) {
