@@ -60,7 +60,7 @@ public class AhrefLabel extends JLabel {
     }
 
     private String localize(String key) {
-        ResourceBundle bundle = ResourceBundle.getBundle("i18n/MessagesBundle");
+        ResourceBundle bundle = ResourceBundle.getBundle(format("%s/i18n/MessagesBundle", getClass().getPackageName().replace(".", "/")));
         return bundle.getString(key);
     }
 }
