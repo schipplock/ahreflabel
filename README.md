@@ -3,7 +3,6 @@
 AHrefLabel ist ein klickbares JLabel. Es soll einen `<a href`-Link aus der HTML-Welt darstellen.
 Deswegen auch dieser komische Name. Bei Klick auf das `AHrefLabel` öffnet sich die entsprechende Website.
 Es wird der Standardwebbrowser genutzt.
-Diese Bibliothek wurde mit Java 17 getestet.
 
 ## Screenshots
 
@@ -17,7 +16,7 @@ Diese Bibliothek wurde mit Java 17 getestet.
 <dependency>
     <groupId>de.schipplock.gui.swing</groupId>
     <artifactId>ahreflabel</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
 </dependency>
 ```
 
